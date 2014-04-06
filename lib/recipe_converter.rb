@@ -1,9 +1,8 @@
 class RecipeConverter
-  def to_tablespoon
-  # [{}{}]
+  def initialize(ingredients)
+    @ingredients = ingredients
   end
-
-  def to_cups
-  # [{}{}]
+  def to_tablespoons
+    @ingredients
   end
 end
