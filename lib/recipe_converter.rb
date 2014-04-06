@@ -13,13 +13,11 @@ class RecipeConverter
 
   private
   def fill(x)
-    my_array = []
-    @ingredients.each do |item|
-      item.each do |ingredient, grams|
-        my_array << {ingredient => grams/x}
+    @ingredients.collect do |item|
+      item.collect do |ingredient, grams|
+        {ingredient => grams/x}
       end
-    end
-    my_array
+    end.flatten
   end
 end
 
